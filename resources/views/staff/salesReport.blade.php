@@ -14,7 +14,7 @@
                     <!-- /.panel-heading -->
                     <div class="panel-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered table-hover dataTable" id="dataTables-example">
+                            <table class="table table-striped table-bordered table-hover datatable display nowrap" id="dataTables-example">
                                 <thead>
                                 <tr>
                                     <th>نام مشتری</th>
