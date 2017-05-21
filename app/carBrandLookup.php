@@ -8,7 +8,7 @@ class carBrandLookup extends Model
 {
     //
     protected $primaryKey='brandNo';
-    protected $table = "carBrandLookups";
+    protected $table = "carbrandlookups";
 
     public function car()
     {

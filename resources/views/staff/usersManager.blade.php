@@ -3,8 +3,8 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12" style="margin: 2em">
-                <h1 class="page-header" style="display: inline;border-bottom: 0;margin: 1em">مدیریت کاربران</h1>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newUser">ثبت کاربر جدید</button>
+                <h1 class="page-header" style="display: inline;border-bottom: 0;margin: 1em">User Managment</h1>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newUser">Add New User</button>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -28,12 +28,12 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>نام و نام خانوادگی</th>
-                                    <th>کد پرسنلی</th>
-                                    <th>سمت</th>
-                                    <th>ایمیل</th>
-                                    <th>ویرایش</th>
-                                    <th>حذف</th>
+                                    <th>Full Name</th>
+                                    <th>Personal code</th>
+                                    <th>Job</th>
+                                    <th>Email</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -43,8 +43,8 @@
                                         <td>{{$user->personalCode}}</td>
                                         <td>{{$user->postLookup->post}}</td>
                                         <td>{{$user->email}}</td>
-                                        <td style="text-align: center"><a  title="ویرایش" href="{{url('user/edit',$user->personalCode)}}" class="user-edit-icon"><span class="fa fa-edit"></span></a></td>
-                                        <td style="text-align: center"><a title="حدف" href="{{url('user/delete',$user->personalCode)}}" class="user-edit-icon"><span class="fa fa-trash"></span></a></td>
+                                        <td style="text-align: center"><a  title="Edit" href="{{url('user/edit',$user->personalCode)}}" class="user-edit-icon"><span class="fa fa-edit"></span></a></td>
+                                        <td style="text-align: center"><a title="Delete" href="{{url('user/delete',$user->personalCode)}}" class="user-edit-icon"><span class="fa fa-trash"></span></a></td>
 
                                     </tr>
                                 @endforeach
@@ -62,24 +62,24 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="بستن"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title">ثبت کاربر جدید</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">Add a new user</h4>
                                 </div>
                                 <div class="modal-body">
                                     <form method="post" action="{{url('staff/usersManager')}}">
                                         {{csrf_field()}}
                                         <div class="form-group">
-                                            <lable>نام و نام خانوادگی :</lable>
+                                            <lable>Full Name :</lable>
                                             <input name="name" type="text" class="form-control">
                                         </div>
 
                                         <div class="form-group">
-                                            <lable>کد پرسنلی :</lable>
+                                            <lable>Personnel Code :</lable>
                                             <input name="personalCode" type="text" class="form-control">
                                         </div>
 
                                         <div class="form-group">
-                                            <lable>سمت :</lable>
+                                            <lable>Post :</lable>
                                             <select name="postLookups_postID" id="" class="form-control">
                                                 @foreach($posts as $post)
                                                     <option value="{{$post->postID}}">{{$post->post}}</option>
@@ -88,19 +88,19 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <lable>ایمیل سازمانی :</lable>
+                                            <lable>Org Email :</lable>
                                             <input name="email" type="text" class="form-control">
                                         </div>
 
                                         <div class="form-group">
-                                            <lable>گذرواژه :</lable>
+                                            <lable>Password :</lable>
                                             <input name="password" type="password" class="form-control">
                                         </div>
                                         {{--<div class="form-group">--}}
-                                            {{--<input type="submit" class="btn btn-primary" value="ثبت">--}}
+                                            {{--<input type="submit" class="btn btn-primary" value="save">--}}
                                         {{--</div>--}}
                                         <div class="modal-footer">
-                                            <input type="submit" class="btn btn-primary" value=" ثبت ">
+                                            <input type="submit" class="btn btn-primary" value="save">
                                             <a type="button" class="btn btn-default" data-dismiss="modal" href="/staff/usersManager">انصراف</a>
                                         </div>
                                     </form>
@@ -114,9 +114,9 @@
                             {{--<table class="table table-striped table-bordered table-hover" id="dataTables-example">--}}
                                 {{--<thead>--}}
                                 {{--<tr>--}}
-                                    {{--<th>برند</th>--}}
-                                    {{--<th>نام خودرو</th>--}}
-                                    {{--<th>موجودی</th>--}}
+                                    {{--<th>Brand</th>--}}
+                                    {{--<th>Car Name</th>--}}
+                                    {{--<th>Stock</th>--}}
                                 {{--</tr>--}}
                                 {{--</thead>--}}
                                 {{--<tbody>--}}

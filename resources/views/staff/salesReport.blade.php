@@ -3,8 +3,8 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12" style="margin: 2em">
-                <h1 class="page-header" style="display: inline;border-bottom: 0;margin: 1em">گزارشات فروش</h1>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newUser">خروجی Excel</button>
+                <h1 class="page-header" style="display: inline;border-bottom: 0;margin: 1em">sales reports</h1>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newUser">Export</button>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -17,17 +17,17 @@
                             <table class="table table-striped table-bordered table-hover datatable display nowrap" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>نام مشتری</th>
-                                    <th>نام خانوادگی مشتری</th>
-                                    <th>کد ملی</th>
-                                    <th>نوع فروش</th>
-                                    <th>کد پیگیری</th>
-                                    <th>برند</th>
-                                    <th>نام خودرو</th>
-                                    <th>مدل</th>
-                                    <th>تاریخ خرید</th>
-                                    <th>وضعیت تایید</th>
-                                    <th>حذف</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>National ID</th>
+                                    <th>Type</th>
+                                    <th>Tracking Code</th>
+                                    <th>Brand</th>
+                                    <th>Car's Name</th>
+                                    <th>Model</th>
+                                    <th>Date of buy</th>
+                                    <th>Status</th>
+                                    <th>Delete</th>
                                 </tr>
                                 </thead>
                                 <tbody>

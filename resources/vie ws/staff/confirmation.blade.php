@@ -67,31 +67,6 @@
                     </div>
 
             </div>
-
-
-                    {{--<div class="panel-body">--}}
-                        {{--<div class="table-responsive">--}}
-                            {{--<table class="table table-striped table-bordered table-hover" id="dataTables-example">--}}
-                                {{--<thead>--}}
-                                {{--<tr>--}}
-                                    {{--<th>برند</th>--}}
-                                    {{--<th>نام خودرو</th>--}}
-                                    {{--<th>موجودی</th>--}}
-                                {{--</tr>--}}
-                                {{--</thead>--}}
-                                {{--<tbody>--}}
-                                {{--@foreach($cars as $car)--}}
-                                    {{--<tr class="odd gradeX">--}}
-                                        {{--<td>{{$car->carBrandLookups->brand}}</td>--}}
-                                        {{--<td>{{$car->carNameLookups->name}}</td>--}}
-                                        {{--<td>{{$car->carStock}}</td>--}}
-
-                                    {{--</tr>--}}
-                                {{--@endforeach--}}
-                                {{--</tbody>--}}
-                            {{--</table>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
                     <!-- /.panel-body -->
         <!-- /.panel -->
 

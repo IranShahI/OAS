@@ -3,7 +3,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">موجودی خودرو های موجود در پارکینگ</h1>
+                <h1 class="page-header">Parking Stocks</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -18,9 +18,9 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>برند</th>
-                                    <th>نام خودرو</th>
-                                    <th>موجودی</th>
+                                    <th>Brand</th>
+                                    <th>نام Car's Name</th>
+                                    <th>Stock</th>
                                 </tr>
                                 </thead>
                                 <tbody>

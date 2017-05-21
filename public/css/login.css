@@ -4,7 +4,6 @@ body {
     font-weight: 300;
     color: #888;
     line-height: 30px;
-    text-align: center;
 }
 
 strong { font-weight: 500; }
@@ -128,6 +127,9 @@ img { max-width: 100%; }
 	width: 60%;
 	padding-top: 25px;
 }
+.control-label {
+	text-align: left;
+}
 
 .form-top-left h3 { margin-top: 0; }
 
@@ -145,7 +147,7 @@ img { max-width: 100%; }
 	padding: 25px 25px 30px 25px;
 	background: #eee;
 	-moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
-	text-align: right;
+	text-align: left;
 }
 
 .form-bottom form textarea {

@@ -3,8 +3,8 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12" style="margin: 2em">
-                <h1 class="page-header" style="display: inline;border-bottom: 0;margin: 1em">مدیریت خودرو</h1>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newUser">ثبت خودرو جدید</button>
+                <h1 class="page-header" style="display: inline;border-bottom: 0;margin: 1em">Cars Management</h1>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newUser">Add New Car</button>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -44,8 +44,8 @@
                                         <td>{{$car->carNameLookups->name}}</td>
                                         <td>{{$car->carModel}}</td>
                                         <td>{{$car->carStock}}</td>
-                                        <td style="text-align: center"><a  title="ویرایش" href="{{url('staff/carsManager/edit',$car->carNo)}}" class="user-edit-icon"><span class="fa fa-edit"></span></a></td>
-                                        <td style="text-align: center"><a title="حدف" href="{{url('staff/carsManager/delete',$car->carNo)}}" class="user-edit-icon"><span class="fa fa-trash"></span></a></td>
+                                        <td style="text-align: center"><a  title="edit" href="{{url('staff/carsManager/edit',$car->carNo)}}" class="user-edit-icon"><span class="fa fa-edit"></span></a></td>
+                                        <td style="text-align: center"><a title="delete" href="{{url('staff/carsManager/delete',$car->carNo)}}" class="user-edit-icon"><span class="fa fa-trash"></span></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -62,14 +62,14 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="بستن"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title">ثبت خودرو جدید</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">Add a new Car</h4>
                                 </div>
                                 <div class="modal-body">
                                     <form method="post" action="{{url('/staff/carsManager')}}" enctype="multipart/form-data">
                                         {{csrf_field()}}
                                         <div class="form-group">
-                                            <lable>برند :</lable>
+                                            <lable>Brand :</lable>
                                             <select name="carBrandLookups_brandNo" class="form-control">
                                                 @foreach($brands as $brand)
                                                     <option value="{{$brand->brandNo}}">{{$brand->brand}}</option>
@@ -77,29 +77,29 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <lable>نام خودرو :</lable>
+                                            <lable>Car's Name :</lable>
                                             <input name="carName" type="text" class="form-control">
                                         </div>
 
                                         <div class="form-group">
-                                            <lable>مدل :</lable>
+                                            <lable>Model Year :</lable>
                                             <input name="carModel" type="text" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <lable>موجودی پارکینگ :</lable>
+                                            <lable>Stock :</lable>
                                             <input name="carStock" type="text" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <lable>بارگذاری تصویر خودرو :</lable>
+                                            <lable>Upload photo :</lable>
                                             <input name="carImage" type="file" class="form-control">
                                         </div>
 
                                         {{--<div class="form-group">--}}
-                                            {{--<input type="submit" class="btn btn-primary" value="ثبت">--}}
+                                            {{--<input type="submit" class="btn btn-primary" value="save">--}}
                                         {{--</div>--}}
                                         <div class="modal-footer">
-                                            <input type="submit" class="btn btn-primary" value=" ثبت ">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">انصراف</button>
+                                            <input type="submit" class="btn btn-primary" value=" save ">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Discard</button>
                                         </div>
                                     </form>
                                 </div>
@@ -112,9 +112,9 @@
                             {{--<table class="table table-striped table-bordered table-hover" id="dataTables-example">--}}
                                 {{--<thead>--}}
                                 {{--<tr>--}}
-                                    {{--<th>برند</th>--}}
-                                    {{--<th>نام خودرو</th>--}}
-                                    {{--<th>موجودی</th>--}}
+                                    {{--<th>Brand</th>--}}
+                                    {{--<th>Car Name</th>--}}
+                                    {{--<th>Stock</th>--}}
                                 {{--</tr>--}}
                                 {{--</thead>--}}
                                 {{--<tbody>--}}

@@ -3,13 +3,19 @@
 
 <head>
 
+
+<link rel="icon" href="/img/favicons/favicon.png"/>
+<link rel="apple-touch-icon" href="/img/favicons/touch-icon-iphone.png"/>
+<link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/touch-icon-ipad.png"/>
+<link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/touch-icon-iphone-retina.png"/>
+<link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/touch-icon-ipad-retina.png"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Kerman MoToR Administration System| سیستم مدیریت</title>
+    <title>AutoTrader | Administration Panel</title>
 
     <!-- Bootstrap Core CSS -->
     <!--<link href="/css/bootstrap.min.css" rel="stylesheet">-->
@@ -24,7 +30,6 @@
 
     <!-- Custom Fonts -->
     <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/css/iransans/iransans.css" rel="stylesheet" type="text/css">
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,7 +50,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;background:#393185;border-top: 1em solid #e31e24;">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;background:#313c53;border-bottom: 0.6em solid #e31e24;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -53,46 +58,46 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" style="color: white" href="index.html">سیستم مدیریت فروش اینترنتی کرمان موتور</a>
+                <a class="navbar-brand" style="color: white" href="index.html">Operator Panel of Sale Managment</a>
             </div>
 
             <!-- /.navbar-header -->
 
             <div class="container">
-                <div class="pull-left">
-                    <a style="color: white; display: inline-block" class="navbar-text">{{Auth::user()->name}} عزیز، خوش آمدید!</a>
-                    <a style="color: #e31e24 ;display: inline-block" class="navbar-text" href="/logout">خروج <span class="fa fa-sign-out"></span></a>
+                <div class="pull-right">
+                    <a style="color: white; display: inline-block" class="navbar-text">Welcome, dear {{Auth::user()->name}} !</a>
+                    <a style="color: #e31e24 ;display: inline-block" class="navbar-text" href="/logout">Logout <span class="fa fa-sign-out"></span></a>
                 </div>
             </div>
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
-                    <div class="admin-logo"><img class="img-responsive" src="/img/logo.png" alt=""></div>
+                    <div class="admin-logo"><img class="img-responsive" src="/img/autotrader.svg" alt=""></div>
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a class="active" href="{{url('/staff')}}"><i class="fa fa-dashboard fa-fw"></i> داشبورد</a>
+                            <a class="active" href="{{url('/staff')}}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>گزارش ها<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Reports<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 @if(in_array('1',$accessArray))
                                 <li>
-                                    <a href="{{url('/staff/salesReport')}}">فروش ها</a>
+                                    <a href="{{url('/staff/salesReport')}}">Sales</a>
                                 </li>
                                 @endif
                                 @if(in_array('2',$accessArray))
 
                                     <li>
-                                    <a href="{{url('/staff/summary')}}">خلاصه فروش ها</a>
+                                    <a href="{{url('/staff/summary')}}">Sales Summary</a>
                                 </li>
                                     @endif
                                     @if(in_array('7',$accessArray))
                                 <li>
-                                    <a href="#">تراکنش های اینترنتی</a>
+                                    <a href="#">Peyments Transitions</a>
                                 </li>
                                     @endif
                                     @if(in_array('6',$accessArray))
                                 <li>
-                                    <a href="{{url('/staff/parkingRemains')}}">موجودی پارکینگ</a>
+                                    <a href="{{url('/staff/parkingRemains')}}">Left in parking</a>
                                 </li>
                                         @endif
                             </ul>
@@ -100,19 +105,19 @@
 
                         @if(in_array('5',$accessArray))
                         <li>
-                            <a href="{{url('/staff/confirmation')}}"><i class="fa fa-table fa-fw"></i>تایید فروش ها</a>
+                            <a href="{{url('/staff/confirmation')}}"><i class="fa fa-table fa-fw"></i>Sales Confirmation</a>
                         </li>
                         @endif
                         @if(in_array('4',$accessArray))
                         <li>
-                            <a href=""><i class="fa fa-wrench fa-fw"></i> نظرسنجی<span class="fa arrow"></span></a>
+                            <a href=""><i class="fa fa-wrench fa-fw"></i> Poll<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
 
                                 <li>
-                                    <a href="{{url('/staff/pollsManagement')}}">مدیریت نظرسنجی ها</a>
+                                    <a href="{{url('/staff/pollsManagement')}}">Manage Polls</a>
                                 </li>
                                 <li>
-                                    <a href="{{url('/staff/pollsReport')}}">گزارش نظرسنجی</a>
+                                    <a href="{{url('/staff/pollsReport')}}">Polls Report</a>
                                 </li>
 
                             </ul>
@@ -120,19 +125,19 @@
                         @endif
                         @if(in_array('8',$accessArray))
                         <li>
-                            <a href="{{url('/staff/usersManager')}}"><i class="fa fa-sitemap fa-fw"></i> مدیریت کاربران</a>
+                            <a href="{{url('/staff/usersManager')}}"><i class="fa fa-sitemap fa-fw"></i>Users Managment</a>
                         </li>
                             @endif
                         @if(in_array('9',$accessArray))
 
                             <li>
-                                <a href="{{url('/staff/termsOfSale')}}"><i class="fa fa-sitemap fa-fw"></i>مدیریت شرایط فروش</a>
+                                <a href="{{url('/staff/termsOfSale')}}"><i class="fa fa-sitemap fa-fw"></i>Manage Sale Offers</a>
                             </li>
                             @endif
                         @if(in_array('10',$accessArray))
 
                             <li>
-                                <a href="{{url('/staff/carsManager')}}"><i class="fa fa-car fa-fw"></i>مدیریت خودرو</a>
+                                <a href="{{url('/staff/carsManager')}}"><i class="fa fa-car fa-fw"></i>Manage Cars</a>
                             </li>
                         @endif
                     </ul>
@@ -158,8 +163,6 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
-    <script src="/js/persianumber.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
     <script src="/js/plugins/metisMenu/metisMenu.js"></script>
@@ -202,7 +205,7 @@
     $('.datatable').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
+            'copy','csv', 'print'
         ]
     } );
 } );

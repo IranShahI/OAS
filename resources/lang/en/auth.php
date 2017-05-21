@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'نام کاربری یا کلمه عبور نادرست می باشد!',
+    'failed' => 'Incorrect personnel code or password!',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];

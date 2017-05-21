@@ -8,7 +8,7 @@ class saleTypeLookup extends Model
 {
     //
     protected $primaryKey='saleTypeNo';
-    protected $table='saleTypeLookups';
+    protected $table='saletypelookups';
 
     public function termOfSale()
     {

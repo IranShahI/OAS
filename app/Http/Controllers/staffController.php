@@ -106,7 +106,7 @@ class staffController extends Controller
         $user = new User($request->all());
         $user->password =bcrypt($request->password);
         $user->save();
-        Session::flash('success_message','کاربر جدید با موفقیت ثبت شد !');
+        Session::flash('success_message','New user added sucessfully !');
         return redirect()->back();
     }
 
@@ -114,7 +114,7 @@ class staffController extends Controller
     {
         $user = User::all()->find($id);
         $user->delete();
-        Session::flash('success_message','کاربر با موفقیت حذف شد !');
+        Session::flash('success_message','User deleted sucessfully !');
         return redirect()->back();
     }
     public function GETeditUser($id)
@@ -134,7 +134,7 @@ class staffController extends Controller
             $user->password = bcrypt($request->password);
         }
         $user->update();
-        Session::flash('success_message','کاربر با موفقیت ویرایش شد');
+        Session::flash('success_message','User modified sucessfully !');
         return redirect('staff/usersManager');
     }
 
@@ -151,7 +151,7 @@ class staffController extends Controller
     {
         $newTermOfSale=new termOfSale($request->all());
         $newTermOfSale->save();
-        Session::flash('success_message','شرایط فروش مورد نظر با موفقیت اضافه گردید !');
+        Session::flash('success_message','New Sale offer added !');
 
         return redirect()->back();
     }
@@ -160,7 +160,7 @@ class staffController extends Controller
     {
         $termOfsale=termOfSale::find($id);
         $termOfsale->delete();
-        Session::flash('success_message','شرایط فروش مورد نظر با موفقیت حذف گردید !');
+        Session::flash('success_message','Sale offer deleted !');
         return redirect()->back();
     }
 
@@ -176,7 +176,7 @@ class staffController extends Controller
     {
         $termOfSale=termOfSale::find($id);
         $termOfSale->update($request->all());
-        Session::flash('success_message','شرایط فروش مورد نظر با موفقیت ویرایش گردید !');
+        Session::flash('success_message','Sale offer modified !');
         return redirect('/staff/termsOfSale');
     }
 
@@ -205,14 +205,14 @@ class staffController extends Controller
         if ($request->file('carImage')->isValid()) {
             $request->file('carImage')->move($destinationPath, $fileName);
         }
-        Session::flash('success_message','خودرو مورد نظر با موفقیت اضافه گردید !');
+        Session::flash('success_message','New car has been added !');
         return redirect()->back();
     }
     public function deleteCarsManager($id)
     {
         $car=car::find($id);
         $car->delete();
-        Session::flash('success_message','خودرو مورد نظر با موفقیت حذف گردید !');
+        Session::flash('success_message','Selected car has been deleted !');
         return redirect()->back();
     }
 
@@ -233,7 +233,7 @@ class staffController extends Controller
         if ($request->hasFile('carImage')) {
             $request->file('carImage')->move($destinationPath, $fileName);
         }
-        Session::flash('success_message','خودرو مورد نظر با موفقیت ویرایش گردید !');
+        Session::flash('success_message','Selected car has been modified !');
         return redirect('/staff/carsManager');
     }
 
@@ -248,7 +248,7 @@ class staffController extends Controller
     {
         $reports=sale::find($id);
         $reports->delete();
-        Session::flash('success_message','خودرو مورد نظر با موفقیت حذف گردید !');
+        Session::flash('success_message','Selected car has been deleted !');
         return redirect()->back();
     }
 

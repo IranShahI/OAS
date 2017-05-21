@@ -3,7 +3,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12" >
-                <h1 class="page-header" >ویرایش خودرو</h1>
+                <h1 class="page-header" >Car Modification</h1>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -26,25 +26,25 @@
                             </div>
 
                             <div class="form-group">
-                                <lable>نام خودرو :</lable>
+                                <lable>Car's Name' :</lable>
                                 <input name="carName" type="text" class="form-control" value="{{$car->carNameLookups->name}}">
                             </div>
 
                             <div class="form-group">
-                                <lable>مدل :</lable>
+                                <lable>Model Year :</lable>
                                 <input name="carModel" type="text" class="form-control" value="{{$car->carModel}}">
                             </div>
                             <div class="form-group">
-                                <lable>موجودی پارکینگ :</lable>
+                                <lable>Parking Stock :</lable>
                                 <input name="carStock" type="text" class="form-control" value="{{$car->carStock}}">
                             </div>
                             <div class="form-group">
-                                <lable>بارگذاری تصویر خودرو :</lable>
+                                <lable>Ulpoad photo :</lable>
                                 <input name="carImage" type="file" class="form-control">
                             </div>
                             <div class="modal-footer">
-                                <input type="submit" class="btn btn-primary" value=" ثبت ">
-                                <a type="button" class="btn btn-default" data-dismiss="modal" href="/staff/carsManager">انصراف</a>
+                                <input type="submit" class="btn btn-primary" value=" save ">
+                                <a type="button" class="btn btn-default" data-dismiss="modal" href="/staff/carsManager">Discard</a>
                             </div>
                         </form>
                     </div>

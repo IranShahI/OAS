@@ -3,8 +3,8 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12" style="margin: 2em">
-                <h1 class="page-header" style="display: inline;border-bottom: 0;margin: 1em">مدیریت شرایط فروش</h1>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newUser">ثبت شرایط فروش جدید</button>
+                <h1 class="page-header" style="display: inline;border-bottom: 0;margin: 1em">Sale Offers Managment</h1>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newUser">Add new offer</button>
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -27,14 +27,14 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>کد شرایط فروش</th>
-                                    <th>نوع فروش</th>
-                                    <th>خودرو</th>
-                                    <th>توضیحات</th>
-                                    <th>قیمت تمام شده</th>
-                                    <th>پرداخت اولیه</th>
-                                    <th>ویرایش</th>
-                                    <th>حذف</th>
+                                    <th>Code</th>
+                                    <th>Sale Type</th>
+                                    <th>Car</th>
+                                    <th>Detail</th>
+                                    <th>Overall price</th>
+                                    <th>initial Price</th>
+                                    <th>Modify</th>
+                                    <th>Delete</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -46,8 +46,8 @@
                                         <td>{{$termOfSale->description}}</td>
                                         <td class="number">{{$termOfSale->cost}}</td>
                                         <td class="number">{{$termOfSale->initialPrice}}</td>
-                                        <td style="text-align: center"><a  title="ویرایش" href="{{url('staff/termsOfSale/edit',$termOfSale->termOfSaleNo)}}" class="user-edit-icon"><span class="fa fa-edit"></span></a></td>
-                                        <td style="text-align: center"><a title="حدف" href="{{url('staff/termsOfSale/delete',$termOfSale->termOfSaleNo)}}" class="user-edit-icon"><span class="fa fa-trash"></span></a></td>
+                                        <td style="text-align: center"><a  title="edit" href="{{url('staff/termsOfSale/edit',$termOfSale->termOfSaleNo)}}" class="user-edit-icon"><span class="fa fa-edit"></span></a></td>
+                                        <td style="text-align: center"><a title="delete" href="{{url('staff/termsOfSale/delete',$termOfSale->termOfSaleNo)}}" class="user-edit-icon"><span class="fa fa-trash"></span></a></td>
                                     </tr>
                                 @endforeach
                                 </tbody>
@@ -71,7 +71,7 @@
                                     <form method="post" action="{{url('staff/termsOfSale')}}">
                                         {{csrf_field()}}
                                         <div class="form-group">
-                                            <lable>نوع فروش :</lable>
+                                            <lable>Sale Type :</lable>
                                             <select name="saleTypeLookups_saleTypeNo" class="form-control">
                                                 @foreach($saleTypes as $saleType)
                                                     <option value="{{$saleType->saleTypeNo}}">{{$saleType->saleType}}</option>
@@ -79,7 +79,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <lable>خودرو :</lable>
+                                            <lable>Car :</lable>
                                             <select name="car_carNo" class="form-control">
                                                 @foreach($cars as $car)
                                                     <option value="{{$car->carNo}}">{{$car->carNameLookups->name}}</option>

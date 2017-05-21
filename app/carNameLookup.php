@@ -8,7 +8,7 @@ class carNameLookup extends Model
 {
     //
     protected $primaryKey='nameNo';
-    protected $table = "carNameLookups";
+    protected $table = "carnamelookups";
     public $timestamps = false;
 
 

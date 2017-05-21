@@ -8,7 +8,7 @@ class postLookup extends Model
 {
     //
     protected $primaryKey = 'postID';
-    protected $table = "postLookups";
+    protected $table = "postlookups";
 
     public function User()
     {

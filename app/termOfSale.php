@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class termOfSale extends Model
 {
     protected $primaryKey = 'termOfSaleNo';
-    protected $table='termOfSales';
+    protected $table='termofsales';
     protected $fillable = [
         'description', 'car_carNo', 'cost','initialPrice','saleTypeLookups_saleTypeNo',
     ];

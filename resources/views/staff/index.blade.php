@@ -3,7 +3,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">داشبورد</h1>
+                    <h1 class="page-header">Dashboard</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -103,29 +103,103 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-newspaper-o"></i> پیام های عمومی
+                            <i class="fa fa-newspaper-o"></i> Public Notifications
                             <div style="margin-top: 1em">
                                 <div class="row">
                                     <div class="alert alert-info" style="margin:0 2em 0 2em">
-                                        <p>زندگی یعنی: زنگ فرصت های طلایی و نگاه آرمانی به هدف های بلند !!</p>
+                                        <p>“The Group will continue to invest in the business but given that our strategy is focused on organic growth, the Board’s intention is to use the majority of surplus cash, after taking account of dividends, to fund a rolling programme of share buy-backs, starting imminently. The expectation is that some surplus cash will be used to further reduce indebtedness.”</p>
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="row" style="background: rgba(255, 255, 255, 0.51);margin: 1em;padding: 2em;border-radius: .5em;">
-                                    <div class="col-md-6" style="border-radius: .3em;overflow: hidden">
-                                        <img style="border-radius: .3em" class="img-responsive" src="/img/news.jpg" alt="">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h4>تولید خودروهای هیوندای در کرمان موتور</h4>
-                                        {{--<h4>ضمن عرض تبریک، توصیه ای به همکاران عزیز</h4>--}}
-                                        <p>  مديرعامل كرمان موتور از امضاي قرارداد با شركت هيونداي موتور كره جنوبي به منظور توليد خودروهاي اين شركت كره اي در منطقه ويژه اقتصادي ارگ جديد بم خبر داد.
-                                            سامان فيروزي با اعلام اين خبر اظهار داشت: به دنبال امضاي قرارداد با شركت هيونداي موتور كره جنوبي مقرر شد، تا از دی ماه امسال شاهد توليد محصولات اين خودروساز كره اي در ايران باشيم. به گفته وي، در گام اول  و از ابتدای فصل زمستان، توليد دو محصول هيونداي i10 و i20 در كارخانه كرمان موتور آغاز خواهد شد و تمام توان خود را براي توليد و عرضه محصولات به روز و با كيفيت به كار خواهيم بست.
+                                <div class="animatedBlock row clearfix">
 
-                                            فيروزي با تاكيد بر اينكه لغو تحريم ها به واسطه برجام، فصل تازه اي در اقتصاد ايران و به ويژه صنعت خودروسازي كشور گشوده است، تصريح كرد: خودروسازان بخش خصوصي با قراردادهايي كه با شرکای جدید خود به امضا مي رسانند، از يك سو به إيجاد اشتغال بيشتر كمك كرده و از سوي ديگر حق انتخاب بيشتري را در اختيار مشتريان قرار مي  دهند.
+		<div class="col-sm-6 block-large">
 
-                                            مديرعامل كرمان موتور متذكر شد: شركت هاي إيراني، بايد با قراردادهاي مشاركت انتفاعي يا جوينت ونچر از مزاياي مالي و همچنين دانش و تكنولوژي شركاي خارجي خود بهره مند شوند. وي در پايان اولويت اصلي كرمان موتور را گسترش همكاري با شركاي فعلي و آغاز همکاری جدید با خودروسازان معتبر جهانی، افزايش كيفيت محصولات توليدي و توسعه سبد محصولات دانست، كه در همين راستا قرارداد هيونداي موتور كره جنوبي به امضا رسيده است.</p>
-                                    </div>
-                                </div>
+			<div class="percentBlock" style="background-color: rgb(38, 127, 200); height: 204px;">
+				<h3><span class="counter">100</span>%</h3>
+				<p>of our business is focused on digital services</p>
+			</div>
+												
+		</div><!-- col -->
+
+
+
+		<div class="col-sm-6 block-large">
+
+			<div class="percentBlock" style="background-color: rgb(0, 165, 3); height: 204px;">
+				<h3><span class="counter">4</span>x</h3>
+				<p>larger consumer audience compared to our nearest competitor</p>
+			</div>
+												
+		</div><!-- col -->
+
+
+
+		<div class="col-sm-6 col-md-4 block-medium">
+
+			<div class="percentBlock" style="background-color: rgb(194, 119, 205); height: 204px;">
+				<h3><span class="counter">88</span>%</h3>
+				<p>of people are familiar with the Auto Trader brand as somewhere to research/buy/sell cars</p>
+			</div>
+												
+		</div><!-- col -->
+
+
+
+		<div class="col-sm-6 col-md-4 block-medium">
+
+			<div class="percentBlock" style="background-color: rgb(255, 171, 25); height: 204px;">
+				<h3><span class="counter">250</span>million</h3>
+				<p>average number of advert views per month on Auto Trader</p>
+			</div>
+												
+		</div><!-- col -->
+
+
+
+		<div class="col-sm-6 col-md-4 block-medium">
+
+			<div class="percentBlock" style="background-color: rgb(232, 91, 48); height: 204px;">
+				<h3><span class="counter">67</span>%</h3>
+				<p>of consumers rated Auto Trader as the most influencial classified site</p>
+			</div>
+												
+		</div><!-- col -->
+
+
+
+		<div class="col-sm-6 col-md-4 block-medium">
+
+			<div class="percentBlock" style="background-color: rgb(200, 47, 108); height: 204px;">
+				<h3><span class="counter">1.5</span>million</h3>
+				<p>valuations conducted on Auto Trader by consumers each month</p>
+			</div>
+												
+		</div><!-- col -->
+
+
+
+		<div class="col-sm-6 col-md-4 block-medium">
+
+			<div class="percentBlock" style="background-color: rgb(87, 106, 115); height: 204px;">
+				<h3><span class="counter">430000</span></h3>
+				<p>average numbers of cars listed on Auto Trader per day</p>
+			</div>
+												
+		</div><!-- col -->
+
+
+
+		<div class="col-sm-6 col-md-4 block-medium">
+
+			<div class="percentBlock" style="background-color: rgb(104, 159, 56); height: 204px;">
+				<h3><span class="counter">80</span>%</h3>
+				<p>of UK automotive retailers advertise on Auto Trader</p>
+			</div>
+												
+		</div><!-- col -->
+
+</div>
                             </div>
                         </div>
                         <!-- /.panel-heading -->
